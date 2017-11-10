@@ -7,10 +7,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import test.dahun.mobileplay.R;
 
@@ -20,6 +25,10 @@ import test.dahun.mobileplay.R;
 
 public class VideoFragment extends Fragment
 {
+
+    @BindView(R.id.mv_top_image) ImageView mvTopImage;
+    @BindView(R.id.navi) ImageButton navibtn;
+
 
     final String TAG="VideoFragment";
     LinearLayout layout;
@@ -42,6 +51,8 @@ public class VideoFragment extends Fragment
     }
 
     public void initSetting() {
+        Glide.with(getContext()).load(R.drawable.mv_1_bg).into(mvTopImage);
+        navibtn.setImageResource(R.drawable.mn_default);
 
 
 

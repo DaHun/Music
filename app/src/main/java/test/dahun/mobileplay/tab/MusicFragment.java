@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -30,7 +31,7 @@ public class MusicFragment extends Fragment
     @BindView(R.id.play_2_trackImage) ImageView play_2_trackImage;
     @BindView(R.id.ic_homeBtn) Button ic_homeBtn;
     @BindView(R.id.ic_equalizerBtn) Button ic_equalizerBtn;
-
+    @BindView(R.id.navi) ImageButton navibtn;
 
 
     final String TAG="MusicFragment";
@@ -85,7 +86,7 @@ public class MusicFragment extends Fragment
         ic_homeBtn.setBackgroundResource(R.drawable.ic_home);
         ic_equalizerBtn.setBackgroundResource(R.drawable.ic_equalizer);
         play_2_trackImage.setImageResource(R.drawable.play_2_trackimg_01);
-
+        navibtn.setImageResource(R.drawable.mn_default);
 
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
